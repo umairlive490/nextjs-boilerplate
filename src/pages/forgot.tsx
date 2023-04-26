@@ -1,9 +1,8 @@
-import { Button, Grid, TextField, Typography, Hidden } from '@mui/material';
+import { Button, Grid, TextField, Typography } from '@mui/material';
 import { validateEmail } from '@utils';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import Image from 'next/image';
-import loginBackground from '../assets/images/login-background.png';
 import lockIcon from '../assets/images/lock.svg';
 import { ChevronLeft } from '@mui/icons-material';
 import { Box } from '@mui/system';
@@ -60,28 +59,8 @@ function ResetPassword() {
 
 	return (
 		<>
-			<Grid container>
-				<Grid sx={{ position: 'relative' }} item xs={12} sm={8}>
-					<Grid container>
-						<Hidden smDown>
-							<Grid
-								item
-								xs={12}
-								sx={{
-									position: 'absolute',
-									top: 0,
-									bottom: 0,
-									right: 0,
-									left: 0,
-									backgroundImage: `url(${loginBackground.src})`,
-									backgroundRepeat: 'no-repeat',
-									backgroundSize: 'cover'
-								}}
-							></Grid>
-						</Hidden>
-					</Grid>
-				</Grid>
-				<Grid item xs={12} sm={4}>
+			<Grid container alignItems='center' justifyContent='center'>
+				<Grid item xs={12} md={6} lg={4}>
 					<Grid
 						minHeight={'100vh'}
 						container

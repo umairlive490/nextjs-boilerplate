@@ -1,7 +1,6 @@
 import {
 	Button,
 	Grid,
-	Hidden,
 	InputAdornment,
 	TextField,
 	IconButton,
@@ -10,7 +9,6 @@ import {
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import Image from 'next/image';
-import loginBackground from '../assets/images/login-background.png';
 import axios from 'axios';
 import lockIcon from '../assets/images/lock.svg';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
@@ -88,28 +86,8 @@ function ResetPassword() {
 
 	return (
 		<>
-			<Grid container>
-				<Grid item position={'relative'} xs={12} sm={8}>
-					<Grid container>
-						<Hidden smDown>
-							<Grid
-								item
-								xs={12}
-								sx={{
-									position: 'absolute',
-									top: 0,
-									bottom: 0,
-									right: 0,
-									left: 0,
-									backgroundImage: `url(${loginBackground.src})`,
-									backgroundRepeat: 'no-repeat',
-									backgroundSize: 'cover'
-								}}
-							></Grid>
-						</Hidden>
-					</Grid>
-				</Grid>
-				<Grid item xs={12} sm={4}>
+			<Grid container alignItems='center' justifyContent='center'>
+				<Grid item xs={12} md={6} lg={4}>
 					<Grid
 						minHeight={'100vh'}
 						container
