@@ -13,8 +13,7 @@ import {
 	Button,
 	Box
 } from '@mui/material';
-import googleIcon from '../assets/images/google-icon.svg';
-import microsoftIcon from '../assets/images/microsoft-icon.svg';
+import usersIcon from '../assets/images/users_icon.svg';
 import { signIn } from 'next-auth/react';
 import { LoginInput } from '@types';
 import { useRouter } from 'next/router';
@@ -107,6 +106,10 @@ const Login: NextPage = () => {
 		setLoginInput({ ...loginInput, [name]: value });
 	};
 
+	const handleRegister = () => {
+		router.push('/register');
+	};
+
 	const handleLoginClick = async () => {
 		const { username, password } = loginInput;
 
@@ -123,7 +126,7 @@ const Login: NextPage = () => {
 
 	return (
 		<Grid container alignItems='center' justifyContent='center' sx={{ minHeight: '100vh' }}>
-			<Grid item xs={12} sm={4}>
+			<Grid item xs={12} md={6} lg={4}>
 				<Grid container sx={classes.signInContainer}>
 					<Typography variant='h4'>Sign in</Typography>
 					<Grid item pt={4}>
@@ -184,20 +187,12 @@ const Login: NextPage = () => {
 					</Grid>
 					<Grid item pt='30px'>
 						<Button
+							onClick={handleRegister}
 							variant='outlined'
 							sx={classes.loginWithButton}
-							startIcon={<Image src={googleIcon} alt='googleIcon' />}
+							startIcon={<Image src={usersIcon} alt='googleIcon' />}
 						>
-							Continue With Google
-						</Button>
-					</Grid>
-					<Grid item pt={1}>
-						<Button
-							variant='outlined'
-							sx={classes.loginWithButton}
-							startIcon={<Image src={microsoftIcon} alt='microsoftIcon' />}
-						>
-							Continue With Microsoft
+							Register Now
 						</Button>
 					</Grid>
 				</Grid>

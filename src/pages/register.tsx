@@ -5,7 +5,6 @@ import { RegistrationInput } from '@types';
 import {
 	Button,
 	Grid,
-	Hidden,
 	IconButton,
 	InputAdornment,
 	TextField,
@@ -13,7 +12,6 @@ import {
 } from '@mui/material';
 import { useRouter } from 'next/router';
 import styled from '@emotion/styled';
-import loginBackground from '../assets/images/login-background.png';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 
 const classes = {
@@ -118,7 +116,7 @@ const Register: NextPage = () => {
 
 	return (
 		<Grid container alignItems='center' justifyContent='center' sx={{ minHeight: '100vh' }}>
-			<Grid item xs={12} sm={4}>
+			<Grid item xs={12} md={6} lg={4}>
 				<Grid container sx={classes.signInContainer}>
 					<Typography variant='h4'>Register User</Typography>
 					<Grid item pt={4}>
