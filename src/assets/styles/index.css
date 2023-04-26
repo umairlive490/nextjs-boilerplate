@@ -1,0 +1,21 @@
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/open-sans.ttf');
+}
+
+@font-face {
+	font-family: 'Public Sans';
+	src: url('../fonts/PublicSans-VariableFont_wght.ttf');
+}
+
+@font-face {
+	font-family: 'Barlow';
+	src: url('../fonts/Barlow-Bold.ttf');
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+		Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
